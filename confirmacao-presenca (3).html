@@ -185,10 +185,17 @@ color: white;
             <label for="name">Seu nome *</label>
             <input type="text" id="name" placeholder="Nome completo" autocomplete="off"/>
           </div>
-          <div class="field">
-            <label for="companion">Acompanhante <span style="opacity:.45;font-size:.58rem;letter-spacing:0;text-transform:none">(opcional)</span></label>
-            <input type="text" id="companion" placeholder="Nome do acompanhante" autocomplete="off"/>
-          </div>
+         <div class="field">
+  <label for="companion-select">Acompanhante</label>
+  <select id="companion-select" onchange="toggleCompanion()" style="background:#FAF7F4;border:1px solid rgba(149,91,31,0.16);border-bottom:2px solid rgba(149,91,31,0.18);padding:12px 14px;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.88rem;font-weight:300;color:#2A1200;outline:none;border-radius:0;width:100%;-webkit-appearance:none;">
+    <option value="nao">Sem acompanhante</option>
+    <option value="sim">Com 1 acompanhante</option>
+  </select>
+</div>
+<div class="field full" id="companion-field" style="display:none;">
+  <label for="companion">Nome do acompanhante</label>
+  <input type="text" id="companion" placeholder="Nome completo do acompanhante" autocomplete="off"/>
+</div>
         </div>
         <p class="form-note">Este convite é válido para você e mais 1 acompanhante. Ao confirmar, seus dados ficam registrados para organização do evento.</p>
         <button class="btn-confirm" id="btn-confirm" onclick="confirmar()">Confirmar Presença</button>
