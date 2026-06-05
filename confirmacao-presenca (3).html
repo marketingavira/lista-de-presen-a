@@ -285,6 +285,11 @@ color: white;
     window._remove(window._confirmadosRef);
   }
 
+  function toggleCompanion() {
+  const val = document.getElementById('companion-select').value;
+  document.getElementById('companion-field').style.display = val === 'sim' ? 'block' : 'none';
+  if (val === 'nao') document.getElementById('companion').value = '';
+}
   function confirmar() {
     const name      = document.getElementById('name').value.trim();
     const companion = document.getElementById('companion').value.trim();
